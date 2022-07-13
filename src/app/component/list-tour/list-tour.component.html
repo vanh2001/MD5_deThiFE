@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>List Tour</h2>
+  <button type="button" class="btn btn-outline-primary" routerLink="create">Create</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Price</th>
+      <th scope="col">Description</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let p of listTour; index as i">
+    <tr>
+      <th scope="row">{{i + 1}}</th>
+      <td>{{p.title}}</td>
+      <td>{{p.price}}</td>
+      <td>{{p.description}}</td>
+      <td>
+        <button type="button" class="btn btn-outline-warning" [routerLink]="['edit', p.id]">Edit</button>
+        <button type="button" class="btn btn-outline-danger" [routerLink]="['delete', p.id]">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<router-outlet></router-outlet>

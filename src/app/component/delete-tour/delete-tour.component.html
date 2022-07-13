@@ -1,0 +1,22 @@
+<form [formGroup]="tourForm" (ngSubmit)="delete(id)" >
+  <h2>Delete Tour</h2>
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" id="title" aria-describedby="title2" formControlName="title">
+    <div id="title2" class="form-text">Don't let blank</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="price" class="form-label">Price</label>
+    <input type="number" class="form-control" id="price" aria-describedby="price2" formControlName="price">
+    <div id="price2" class="form-text">Don't let blank and is a number</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="price" class="form-label">Description</label>
+    <input type="text" class="form-control" id="description" aria-describedby="description2" formControlName="description">
+    <div id="description2" class="form-text">Don't let blank</div>
+  </div>
+
+  <button type="submit" class="btn btn-primary mt-3" >Delete</button>
+</form>
